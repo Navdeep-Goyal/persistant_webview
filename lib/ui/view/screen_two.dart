@@ -19,7 +19,7 @@ class _Screen2State extends State<Screen2> {
     return WillPopScope(
       onWillPop: () async {
         bool canGoBack = await widget.webViewController.canGoBack();
-        if (canGoBack) {
+        if (canGoBack ) {
           widget.webViewController.goBack();
           return false;
         } else {

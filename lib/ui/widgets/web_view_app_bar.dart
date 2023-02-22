@@ -5,6 +5,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import '../../core/business_logic/cubit/progess_cubit_cubit.dart';
 import '../../core/business_logic/cubit/url_string_cubit.dart';
 import '../../utils/colors.dart';
+import 'custom_circular_progress_indicator.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -65,15 +66,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           BlocBuilder<ProgessCubit, ProgressEnum>(
             builder: (context, state) {
               if (state == ProgressEnum.loading) {
-                return Container(
-                  height: 24,
-                  width: 24,
-                  padding: const EdgeInsets.all(8),
-                  child: const CircularProgressIndicator(
-                    color: kPrimaryColor,
-                    strokeWidth: 2,
-                  ),
-                );
+                return const CustomCircularProgressIndicator();
               }
               return IconButton(
                   onPressed: () {
@@ -87,3 +80,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
+

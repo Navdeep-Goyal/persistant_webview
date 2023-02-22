@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistant_webview/core/business_logic/cubit/progess_cubit_cubit.dart';
 import 'package:persistant_webview/ui/view/screen_one.dart';
 import 'package:persistant_webview/utils/colors.dart';
+import 'package:persistant_webview/utils/text_contants.dart';
 
 import 'core/business_logic/cubit/url_string_cubit.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => UrlStringCubit()),
       ],
       child: MaterialApp(
-        title: 'Persistant webview',
+        title: TextContants.title,
         theme: ThemeData(primaryColor: kPrimaryColor),
         home: const Screen1(),
       ),
