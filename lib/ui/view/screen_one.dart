@@ -27,7 +27,7 @@ class _Screen1State extends State<Screen1> {
     params = const PlatformWebViewControllerCreationParams();
 
     //Initial url to load in webview
-    String initialWebViewUrl = "https://asthatrade.com/product/flow";
+    String initialWebViewUrl = "https://cred.club/";
     Uri uri = Uri.parse(initialWebViewUrl);
     BlocProvider.of<UrlStringCubit>(context).setUrl(initialWebViewUrl);
     NavigationDelegate navigationDelegate = NavigationDelegate(
